@@ -8,8 +8,25 @@ A resource-intensive project designed to process video data, cluster influencers
 
 1. **Input:**
    - Video URLs provided as raw data.
+  
+2. **Output:**
+   - Generate a comprehensive report showcasing influencers’ performance with clustered data, visualizations, and insights.
+     ## Influencer Performance Report
 
-2. **Process Flow:**
+| Influencer Label | Influencer Pic                                                                                                   | Average Performance | Video URL                                                                                                      |
+|------------------|------------------------------------------------------------------------------------------------------------------|---------------------|---------------------------------------------------------------------------------------------------------------|
+| 30               | ![Influencer 30](https://raw.githubusercontent.com/Ansumanbhujabal/Influencer_Performance_System/main/influencers/detected_objects_archive/32/man_frame_1.jpg) | 1.5304             | [Video Link](https://fgimagestorage.blob.core.windows.net/facebook-assets/hd-604041931565137)                |
+| 25               | ![Influencer 25](https://raw.githubusercontent.com/Ansumanbhujabal/Influencer_Performance_System/main/influencers/detected_objects_archive/27/man_frame_17.jpg) | 1.12256666666667   | [Video Link](https://fgimagestorage.blob.core.windows.net/facebook-assets/hd-925260332281638)                |
+| 3                | ![Influencer 3](https://raw.githubusercontent.com/Ansumanbhujabal/Influencer_Performance_System/main/influencers/detected_objects_archive/3/man_frame_3.jpg) | 1.02478604992305   | [Video Link](https://fgimagestorage.blob.core.windows.net/facebook-assets/hd-992064161877405)                |
+| 55               | ![Influencer 55](https://raw.githubusercontent.com/Ansumanbhujabal/Influencer_Performance_System/main/influencers/detected_objects_archive/58/man_frame_21.jpg) | 0.9830456907       | [Video Link](https://fgimagestorage.blob.core.windows.net/facebook-assets/hd-817763467176157)                |
+| 45               | ![Influencer 45](https://raw.githubusercontent.com/Ansumanbhujabal/Influencer_Performance_System/main/influencers/detected_objects_archive/48/man_frame_1.jpg) | 0.917806254725     | [Video Link](https://fgimagestorage.blob.core.windows.net/facebook-assets/hd-883738210384679)                |
+| 15               | ![Influencer 15](https://raw.githubusercontent.com/Ansumanbhujabal/Influencer_Performance_System/main/influencers/detected_objects_archive/17/man_frame_3.jpg) | 0.8273821321       | [Video Link](https://fgimagestorage.blob.core.windows.net/facebook-assets/hd-954832972830686)                |
+| 7                | ![Influencer 7](https://raw.githubusercontent.com/Ansumanbhujabal/Influencer_Performance_System/main/influencers/detected_objects_archive/7/woman_frame_23.jpg) | 0.80381331575      | [Video Link](https://fgimagestorage.blob.core.windows.net/facebook-assets/hd-987643572956494)                |
+| 22               | ![Influencer 22](https://raw.githubusercontent.com/Ansumanbhujabal/Influencer_Performance_System/main/influencers/detected_objects_archive/24/man_frame_17.jpg) | 0.7929559845       | [Video Link](https://fgimagestorage.blob.core.windows.net/facebook-assets/hd-932703258597949)                |
+| 34               | ![Influencer 34](https://raw.githubusercontent.com/Ansumanbhujabal/Influencer_Performance_System/main/influencers/detected_objects_archive/36/man_frame_17.jpg) | 0.5907609883       | [Video Link](https://fgimagestorage.blob.core.windows.net/facebook-assets/hd-905739711170399)                |
+
+
+3. **Process Flow:**
    - Generate vector embeddings for each video using OpenAI CLIP.
    - Cluster videos based on their embeddings to identify unique videos.
    - Calculate the average performance score for each unique video.
@@ -22,8 +39,7 @@ A resource-intensive project designed to process video data, cluster influencers
      ![diagram-export-12-1-2024-9_08_38-PM](https://github.com/user-attachments/assets/ccd36bc4-06c3-42e5-b580-2d44cd4d9d35)
 
 
-3. **Output:**
-   - Generate a comprehensive report showcasing influencers’ performance with clustered data, visualizations, and insights.
+
 
 4. **Visualization:**
    - Accessible via a Streamlit app or as an HTML file.
