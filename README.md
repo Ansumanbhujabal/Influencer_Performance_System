@@ -18,6 +18,9 @@ A resource-intensive project designed to process video data, cluster influencers
    - Save images to a GitHub raw content repository.
    - Match influencer faces across clusters to combine clusters based on face similarity using OpenAI CLIP.
    - Calculate the average performance score for each unique influencer.
+  
+     ![diagram-export-12-1-2024-9_08_38-PM](https://github.com/user-attachments/assets/ccd36bc4-06c3-42e5-b580-2d44cd4d9d35)
+
 
 3. **Output:**
    - Generate a comprehensive report showcasing influencers’ performance with clustered data, visualizations, and insights.
