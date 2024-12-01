@@ -1,7 +1,7 @@
 
 import pandas as pd
 
-df = pd.read_excel("notes/Final_Influencer_Data_insights_up_dec1_t2.xlsx")
+df = pd.read_excel("../notebooks/Final_Influencer_Data_insights_up_dec1_t2.xlsx")
 html_content = """
 <html>
 <head>
@@ -73,7 +73,7 @@ html_content += """
 </html>
 """
 
-with open("output/influencer_report_up.html", "w") as f:
+with open("../output/influencer_report_up.html", "w") as f:
     f.write(html_content)
 
 print("HTML report saved.")
