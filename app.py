@@ -1,38 +1,54 @@
 import streamlit as st
 import pandas as pd
 
-# Load your Excel file or data
-df = pd.read_excel("notes/Final_Influencer_Data_insights_up_dec1_t2.xlsx")
-
-# Validate and clean the image URLs
+df = pd.read_excel("notebooks/Final_Influencer_Data_insights_up_dec1_t2.xlsx")
 df['Influencer Pic URL'] = df['Influencer Pic URL']
-# .apply(
-#     lambda url: url.replace("github.com", "raw.githubusercontent.com").replace("/blob/", "/") 
-#     if isinstance(url, str) and "github.com" in url else "No Image Available"
-# )
-
-# Handle NaN values in other columns
 df.fillna("No human in video ", inplace=True)
 
-# Streamlit App Layout
 st.set_page_config(page_title="Influencer Performance Report", layout="wide")
 
-# Title and Description
-st.title("Influencer Performance Report")
-st.write("A comprehensive table showcasing each influencer's performance, with their pictures and video links.")
+header_cols = st.columns([1, 4]) 
+with header_cols[0]:
+    st.image(
+        "influencers/detected_objects_archive/image.png",
+        use_container_width=True
+    )
+with header_cols[1]:
+    st.markdown(
+        """
+        <style>
+        .header-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding-top: 20px;
+        }
+        .header-description {
+            font-size: 16px;
+            color: #6c757d; /* Subtle gray text for description */
+            margin-top: 5px;
+            padding-bottom: 20px;
+        }
+        </style>
+        <div>
+            <div class="header-title">Influencer Performance Report</div>
+            <div class="header-description">
+                A comprehensive table showcasing each influencer's performance, with their pictures and video links.
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
-# Create a dynamic table
+st.markdown("---") 
+
 st.write("### Influencer Data Table")
 
-# Iterate through each row and display the influencer data
 for index, row in df.iterrows():
-    st.markdown("---")  # Horizontal line to separate influencers
-    cols = st.columns([1, 2, 2, 2])  # Define layout columns (adjust the proportions as needed)
-
-    # Column 1: Influencer Label
+    st.markdown("---")  
+    cols = st.columns([1, 2, 2, 2]) 
     cols[0].write(f"**{row['Influencer Label']}**")
 
-    # Column 2: Influencer Picture
     if row['Influencer Pic URL'] != "No Image Available":
         try:
             cols[1].image(row['Influencer Pic URL'], caption="Influencer Pic", width=150)
@@ -41,15 +57,20 @@ for index, row in df.iterrows():
     else:
         cols[1].write("No Image Available")
 
-    # Column 3: Average Performance
     cols[2].write(f"**Average Performance:** {row['Average Performance']}")
 
-    # Column 4: Video URL
     if row['Video URL'] != "No Data Available":
         cols[3].markdown(f"[Watch Video]({row['Video URL']})")
     else:
         cols[3].write("No Video URL Available")
 
-# Footer
+
 st.markdown("---")
-st.write("Generated using Streamlit")
+footer_cols = st.columns([4, 1])  
+footer_cols[0].markdown(
+    "Made with Data by **FuelGrowth**"
+)
+footer_cols[1].image(
+    "influencers/detected_objects_archive/image.png",
+    use_container_width=True
+)
