@@ -11,7 +11,10 @@ A resource-intensive project designed to process video data, cluster influencers
   
 2. **Output:**
    - Generate a comprehensive report showcasing influencers’ performance with clustered data, visualizations, and insights.
+   - **See The full output**
+     [Influencer Performance System](https://influencerperformancesystemansumanbhujabala.streamlit.app/)
      ## Influencer Performance Report
+
 
 | Influencer Label | Influencer Pic                                                                                                   | Average Performance | Video URL                                                                                                      |
 |------------------|------------------------------------------------------------------------------------------------------------------|---------------------|---------------------------------------------------------------------------------------------------------------|
